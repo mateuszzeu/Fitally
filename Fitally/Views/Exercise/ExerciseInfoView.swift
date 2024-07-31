@@ -25,5 +25,5 @@ struct ExerciseInfoView: View {
 }
 
 #Preview {
-    ExerciseInfoView(exercise: Exercise(name: "Test", sets: "4/4", reps: "12/14", weight: "40", info: "Info o oo"))
+    ExerciseInfoView(exercise: Exercise(name: "Test", sets: "4/4", reps: "12/14", weight: "40", info: "Infoo"))
 }
