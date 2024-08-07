@@ -180,10 +180,10 @@
 		2E1017372C5C090C00D8933B /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				2E2F2D432C62236000899778 /* RootView.swift */,
 				2E2F2D3D2C62150500899778 /* AuthenticationView.swift */,
 				2E2F2D3F2C62169F00899778 /* SignInEmailView.swift */,
 				2E2F2D412C62192E00899778 /* AuthenticationManager.swift */,
-				2E2F2D432C62236000899778 /* RootView.swift */,
 				2E2F2D452C62288B00899778 /* SettingsView.swift */,
 			);
 			path = Authentication;
