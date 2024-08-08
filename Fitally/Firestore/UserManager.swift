@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseFirestore
 
-struct DBUser {
+struct DBUser: Codable {
     let userId: String
     let email: String?
     let photoUrl: String?
@@ -20,6 +20,16 @@ final class UserManager {
     
     static let shared = UserManager()
     private init() { }
+    
+    private let userCollection = Firestore.firestore().collection("users")
+    
+    private func userDocument(userId: String) -> DocumentReference {
+        userCollection.document(userId)
+    }
+    
+    func createNewUser(user: DBUser) async throws {
+        try userDocument(userId: user.userId).setData(from: user, merge: false)
+    }
     
     
     func createNewUser(auth: AuthDataResultModel) async throws {
@@ -34,11 +44,11 @@ final class UserManager {
             userData["photoUrl"] = photoUrl
         }
         
-        try await Firestore.firestore().collection("users").document(auth.uid).setData(userData, merge: false)
+        try await userDocument(userId: auth.uid).setData(userData, merge: false)
     }
     
     func getUser(userId: String) async throws -> DBUser {
-        let snapshot = try await Firestore.firestore().collection("users").document(userId).getDocument()
+        let snapshot = try await userDocument(userId: userId).getDocument()
         
         guard let data = snapshot.data(), let userId = data["userId"] as? String else {
             throw URLError(.badServerResponse)
