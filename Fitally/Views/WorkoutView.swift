@@ -12,33 +12,33 @@ struct WorkoutView: View {
 
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack {
-                    ForEach($workoutDays) { $workoutDay in
-                        VStack(alignment: .leading, spacing: 8) {
-                            HStack {
-                                TextField("Day", text: $workoutDay.name)
-                                    .font(.headline)
-                                    .padding(.bottom, 4)
+                ScrollView {
+                    VStack {
+                        ForEach($workoutDays) { $workoutDay in
+                            VStack(alignment: .leading, spacing: 8) {
+                                HStack {
+                                    TextField("Day", text: $workoutDay.name)
+                                        .font(.headline)
+                                        .padding(.bottom, 4)
+                                    
+                                    DatePicker("", selection: $workoutDay.date, displayedComponents: .date)
+                                        .datePickerStyle(CompactDatePickerStyle())
+                                        .padding(.bottom, 8)
+                                }
                                 
-                                DatePicker("", selection: $workoutDay.date, displayedComponents: .date)
-                                    .datePickerStyle(CompactDatePickerStyle())
-                                    .padding(.bottom, 8)
+                                ForEach($workoutDay.exercises) { $exercise in
+                                    ExerciseView(exercise: exercise)
+                                }
                             }
-                            
-                            ForEach($workoutDay.exercises) { $exercise in
-                                ExerciseView(exercise: exercise)
-                            }
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(13)
+                            .shadow(radius: 4)
+                            .padding(.horizontal)
                         }
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(13)
-                        .shadow(radius: 4)
-                        .padding(.horizontal)
                     }
                 }
-            }
-            .navigationTitle("Workouts")
+                .navigationTitle("Workouts")
         }
     }
 }

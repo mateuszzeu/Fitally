@@ -130,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				2E1016E62C46DA6C00D8933B /* FitallyApp.swift */,
-				2E2F2D472C639FAF00899778 /* Core */,
 				2E1016FA2C46DBA200D8933B /* Views */,
 				2E1016FB2C46DBAE00D8933B /* Models */,
 				2E1017372C5C090C00D8933B /* Authentication */,
@@ -158,6 +157,7 @@
 				2E1016F62C46DB8F00D8933B /* AddWorkoutView.swift */,
 				2E1017042C48328200D8933B /* Exercise */,
 				2E1017052C4832AC00D8933B /* ProgressView */,
+				2E2F2D472C639FAF00899778 /* Core */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,12 +198,12 @@
 		2E2F2D472C639FAF00899778 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2E2F2D4D2C63A13C00899778 /* ProfileView.swift */,
 				2E2F2D432C62236000899778 /* RootView.swift */,
 				2E2F2D3D2C62150500899778 /* AuthenticationView.swift */,
 				2E2F2D3F2C62169F00899778 /* SignInEmailView.swift */,
 				2E2F2D4B2C63A0F600899778 /* SignInEmailViewModel.swift */,
 				2E2F2D482C63A01700899778 /* Settings */,
-				2E2F2D4D2C63A13C00899778 /* ProfileView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
