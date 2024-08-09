@@ -13,6 +13,7 @@ struct DBUser: Codable {
     let email: String?
     let photoUrl: String?
     let dateCreated: Date?
+    var optionSelected: Bool?
 }
 
 
@@ -36,6 +37,7 @@ final class UserManager {
         var userData: [String:Any] = [
             "userId" : auth.uid,
             "dateCreated" : Timestamp(),
+            "optionSelected": false
         ]
         if let email = auth.email {
             userData["email"] = email
@@ -56,8 +58,13 @@ final class UserManager {
         
         let email = data["email"] as? String
         let photoUrl = data["photoUrl"] as? String
-        let dateCreated = data["dateCreated"] as? Date
+        let dateCreated = (data["dateCreated"] as? Timestamp)?.dateValue()
+        let optionSelected = data["optionSelected"] as? Bool
         
-        return DBUser(userId: userId, email: email, photoUrl: photoUrl, dateCreated: dateCreated)
+        return DBUser(userId: userId, email: email, photoUrl: photoUrl, dateCreated: dateCreated, optionSelected: optionSelected)
     }
+    
+    func updateUserOption(user: DBUser) async throws {
+            try userDocument(userId: user.userId).setData(from: user, merge: true)
+        }
 }
