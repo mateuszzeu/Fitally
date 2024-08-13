@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Exercise: Identifiable {
-    let id = UUID()
+struct Exercise: Codable, Identifiable {
+    var id = UUID()
     var name: String
     var sets: String
     var reps: String

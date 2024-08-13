@@ -17,7 +17,6 @@
 		2E1016FF2C46F0DF00D8933B /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1016FE2C46F0DF00D8933B /* WorkoutView.swift */; };
 		2E1017012C48202700D8933B /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1017002C48202700D8933B /* ExerciseView.swift */; };
 		2E1017032C482A3A00D8933B /* ExerciseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1017022C482A3A00D8933B /* ExerciseInfoView.swift */; };
-		2E1017072C5C03C000D8933B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E1017062C5C03C000D8933B /* GoogleService-Info.plist */; };
 		2E10170A2C5C04C300D8933B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1017092C5C04C300D8933B /* FirebaseAnalytics */; };
 		2E10170C2C5C04C300D8933B /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 2E10170B2C5C04C300D8933B /* FirebaseAnalyticsOnDeviceConversion */; };
 		2E10170E2C5C04C300D8933B /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 2E10170D2C5C04C300D8933B /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -50,6 +49,7 @@
 		2E2F2D4C2C63A0F600899778 /* SignInEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F2D4B2C63A0F600899778 /* SignInEmailViewModel.swift */; };
 		2E2F2D4E2C63A13C00899778 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F2D4D2C63A13C00899778 /* ProfileView.swift */; };
 		2E2F2D512C63A54400899778 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F2D502C63A54400899778 /* UserManager.swift */; };
+		2E2F2D532C66054F00899778 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F2D522C66054F00899778 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +64,6 @@
 		2E1016FE2C46F0DF00D8933B /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		2E1017002C48202700D8933B /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		2E1017022C482A3A00D8933B /* ExerciseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInfoView.swift; sourceTree = "<group>"; };
-		2E1017062C5C03C000D8933B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2E2F2D3D2C62150500899778 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		2E2F2D3F2C62169F00899778 /* SignInEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailView.swift; sourceTree = "<group>"; };
 		2E2F2D412C62192E00899778 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		2E2F2D4B2C63A0F600899778 /* SignInEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailViewModel.swift; sourceTree = "<group>"; };
 		2E2F2D4D2C63A13C00899778 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2E2F2D502C63A54400899778 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		2E2F2D522C66054F00899778 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 				2E2F2D4F2C63A52700899778 /* Firestore */,
 				2E1016EA2C46DA6E00D8933B /* Assets.xcassets */,
 				2E1016EC2C46DA6E00D8933B /* Preview Content */,
-				2E1017062C5C03C000D8933B /* GoogleService-Info.plist */,
+				2E2F2D522C66054F00899778 /* GoogleService-Info.plist */,
 			);
 			path = Fitally;
 			sourceTree = "<group>";
@@ -312,8 +312,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E1016EE2C46DA6E00D8933B /* Preview Assets.xcassets in Resources */,
+				2E2F2D532C66054F00899778 /* GoogleService-Info.plist in Resources */,
 				2E1016EB2C46DA6E00D8933B /* Assets.xcassets in Resources */,
-				2E1017072C5C03C000D8933B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
